@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//Importing helper functions
+import { useFonts } from "expo-font";
+import { useEffect } from "react";
+
+//Importing core components
+import { Main } from "./src/router/Main";
+import * as SplashScreen from "expo-splash-screen";
+import { NativeBaseProvider } from "native-base";
+import { StatusBar } from "expo-status-bar";
+import Theme from "./src/components/core/Theme";
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    "Avenir-Book": require("./assets/Avenir-Book.ttf"),
+  });
+
+  useEffect(() => {
+    const close = async () => await SplashScreen.hideAsync();
+    if (fontsLoaded) {
+      close();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider theme={Theme}>
+      <StatusBar style="light" />
+      <Main />
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
