@@ -5,7 +5,7 @@ import { StyleSheet, Image, Dimensions, View, Text } from "react-native";
 import Container from "../components/core/Container";
 import Heading from "../components/core/Heading";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <Container style={styles.main}>
       <View style={styles.box}>
@@ -20,7 +20,12 @@ const Welcome = () => {
             vulputate varius. Nunc egestas eros non est tristique porttitor.
           </Text>
         </View>
-        <Button colorScheme={"primary"} width="full" mb={2}>
+        <Button
+          colorScheme={"primary"}
+          width="full"
+          mb={2}
+          onPress={() => navigation.navigate("login")}
+        >
           Log In
         </Button>
         <Button colorScheme={"black"} width="full">
