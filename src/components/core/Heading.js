@@ -15,5 +15,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
     marginVertical: 10,
     fontFamily: "Avenir-Book",
+    textTransform: "capitalize",
   },
 });
