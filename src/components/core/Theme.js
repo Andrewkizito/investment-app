@@ -1,5 +1,4 @@
 import { extendTheme } from "native-base";
-import { Appearance } from "react-native";
 
 const Theme = extendTheme({
   colors: {
@@ -8,7 +7,7 @@ const Theme = extendTheme({
     },
   },
   config: {
-    initialColorMode: Appearance.getColorScheme(),
+    initialColorMode: "dark",
   },
   fontConfig: {
     fonts: {

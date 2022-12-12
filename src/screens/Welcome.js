@@ -21,14 +21,14 @@ const Welcome = ({ navigation }) => {
           </Text>
         </View>
         <Button
-          colorScheme={"primary"}
+          colorScheme={"blue"}
           width="full"
           mb={2}
           onPress={() => navigation.navigate("login")}
         >
           Log In
         </Button>
-        <Button colorScheme={"black"} width="full">
+        <Button colorScheme={"orange"} width="full">
           Register Now
         </Button>
       </View>

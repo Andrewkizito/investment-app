@@ -18,10 +18,24 @@ const Login = () => {
           style={{ fontSize: 20 }}
         />
         <View>
-          <Input placeholder="Username" mt="3" width={"full"} size="md" />
-          <Input placeholder="Password" mt="3" width={"full"} size="md" />
+          <Input
+            placeholder="Username"
+            mt="3"
+            width={"full"}
+            size="md"
+            color={"white"}
+            type="text"
+          />
+          <Input
+            placeholder="Password"
+            mt="3"
+            width={"full"}
+            size="md"
+            color={"white"}
+            type="password"
+          />
         </View>
-        <Button width={"full"} mt={10} textAlign={"center"}>
+        <Button width={"full"} colorScheme="blue" mt={10} textAlign={"center"}>
           Login
         </Button>
       </View>
