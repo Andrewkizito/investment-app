@@ -20,10 +20,10 @@ const Welcome = () => {
             vulputate varius. Nunc egestas eros non est tristique porttitor.
           </Text>
         </View>
-        <Button color={"primary.400"} width="full" mb={2}>
+        <Button colorScheme={"primary"} width="full" mb={2}>
           Log In
         </Button>
-        <Button color={"amber.200"} width="full">
+        <Button colorScheme={"black"} width="full">
           Register Now
         </Button>
       </View>
